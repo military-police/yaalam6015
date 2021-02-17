@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&display=swap');
+
+body{
+    margin: 0px;
+    font-family: 'Assistant', sans-serif;
+}
+
+h1, h2, h3, h4, h5, p, ul, li{
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+}
+
+/* header */
+
+header{
+ background-color: #F5F5F5;
+ padding: 15px;
+ font-size: 18px;
+ font-weight: 700;
+}
+
+nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    justify-content: space-around;
+}
+
+nav ul li a{
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    padding: 2px;
+    padding-left: 15px;
+    padding-right: 15px;
+    transition: 3ms ease-in-out;
+}
+
+nav ul li a:hover{
+    color: white;
+    background-color:#bdbdbd;
+    border-radius: 20px;
+}
+
+
+.in{
+    color: white;
+    background-color:#FF8C67;
+    border-radius: 20px;
+    padding: 2px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+nav div {
+    flex-grow: 4;
+    text-align:  left;
+}
+
+/* body */
+
+.banner{
+    width: 100%;
+    text-align: center;
+    color: white;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.16), rgba(0, 0, 0, 0.16)),url('images/banner.jpg') no-repeat;
+    -webkit-background-size: cover ;
+    -moz-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+
+section{
+    text-align: right;
+    padding: 2%;
+    padding-left: 15%;
+    padding-right: 15%;
+    font-size: 24px;
+}
+
+section p {
+    margin: 10px;
+}
+
+section img {
+    width: 200px;
+    text-align: center;
+}
+
+/* footer */
+
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #E5E5E5;
+    text-align: center;
+}
