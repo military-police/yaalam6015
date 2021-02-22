@@ -65,19 +65,24 @@ nav div {
     text-align:  left;
 }
 
+nav span{
+    display: none;
+}
+
 /* body */
 
 .banner{
     width: 100%;
     text-align: center;
     color: white;
-    padding-top: 5%;
-    padding-bottom: 5%;
-    background:linear-gradient(0deg, rgba(0, 0, 0, 0.16), rgba(0, 0, 0, 0.16)),url('images/banner.jpg') no-repeat;
+    padding-top: 6%;
+    padding-bottom: 6%;
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.16), rgba(0, 0, 0, 0.16)),url('/images/banner.jpg') no-repeat;
     -webkit-background-size: cover ;
     -moz-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 section{
@@ -106,4 +111,24 @@ footer{
     width: 100%;
     background-color: #E5E5E5;
     text-align: center;
+}
+
+
+@media only screen and (max-width: 768px){
+    
+    #test{
+        display: none;
+    }
+    
+    nav ul li{
+        width: 100%;
+        padding: 10px;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    }
+
+    nav span {
+        display: block;
+    }
+
+
 }

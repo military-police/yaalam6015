@@ -3,19 +3,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="icon" href="images/idfs.svg" type="image"/>
     <title>היחידה הארצית לחקירות מבצעיות</title>
 </head>
 <body dir="rtl">
     <header>
         <nav>
-            <ul>
+            <span>
+                <button id="toggle" onclick="navbar()">&#9776;</button>
+            </span>
+
+            <ul id="test">
                 <li><a class="in" href="index.html">כללי</a></li>
                 <li><a href="info.html">אודות</a></li>
                 <li><a href="contact.html">דרכים ליצרת קשר</a></li>
                 <li><a href="complaint.html">הגשת תלונה</a></li>
             </ul>
 
+
+            <!-- בחר שפה -->
             <div>
                 <select name="lang" id="lang">
                     <option value="HE">Hebrew</option>
@@ -46,6 +54,7 @@
         </p>
     </footer>
 
+    <script src="JS/main.js"></script>
 
 </body>
 </html>
