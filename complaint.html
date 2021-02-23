@@ -11,10 +11,13 @@
 <body dir="rtl">
     <header>
 
-
         <nav>
 
-            <ul id="navbar">
+            <span>
+                <button id="toggle" onclick="navbar()">&#9776;</button>
+            </span>
+
+            <ul id="menu">
                 <li><a href="index.html">כללי</a></li>
                 <li><a href="info.html">אודות</a></li>
                 <li><a href="contact.html">דרכים ליצרת קשר</a></li>
@@ -39,31 +42,52 @@
 
     <section>
 
-        <div id="mails">
             <form action="post">
-                <div>
-                    <label for=""> שם מלא:</label>
-                    <input type="text" name="name">
+                <div class="form-body">
+                    <div>
+                        <h5> שם מלא:</h5>
+                        <input type="text" name="name">
+                    </div>
+    
+                    <div>
+                        <h5> תעודת זהות:</h5>
+                        <input type="text" name="number">    
+                    </div>
+    
+                    <div>
+                        <h5>כתובת :</h5>
+                        <input type="text" name="mail">
+                    </div>
+    
+                    <div>
+                        <h5>מספר פלאפון:</h5>
+                        <input type="tel">
+                    </div>
+    
+                    <div>
+                        <h5>דואר אלקטרוני :</h5>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+
+                    <div>
+                        <h5>מיקום האירוע :</h5>
+                        <input type="text" name="" required>
+                    </div>
+
+                    <div>
+                        <h5>מהות הפניה :</h5>
+                        <textarea name="" id="" cols="55" rows="10"></textarea>
+                    </div>
+
+                    <div>
+                        <h5>צרף מסמכים :</h5>
+                        <input type="file" name="" id="">
+                    </div>
+    
+                    <button type="submit">שלח</button>
                 </div>
-                <div>
-                    <label for=""> תעודת זהות:</label>
-                    <input type="text" name="number">    
-                </div>
-                <div>
-                    <label for="">כתובת :</label>
-                    <input type="text" name="mail">
-                </div>
-                <div>
-                    <label for="">מספר פלאפון:</label>
-                    <input type="tel">
-                </div>
-                <div>
-                    <label for="email">דואר אלקטרוני :</label>
-                    <input type="email" name="email" id="email" required>
-                </div>
-                <button type="submit">שלח</button>
+
             </form>
-        </div>
 
     </section>
     

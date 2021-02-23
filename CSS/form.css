@@ -1,9 +1,36 @@
-#mails{
-    text-align: center;
+section{
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 form{
-    background-color: #ffc251;
-    border-radius: 20px;
-    padding: 10px;
+    color: white;
+    background-color: rgb(41, 41, 41);
+    padding: 4%;
+    border-bottom: 8px solid coral ;
+    width: 70%;
+}
+
+form input {
+    max-width: 400px;
+    width: 400px;
+}
+
+.form-body{
+    margin-right: 5%;
+}
+
+
+/* mobile shit */
+
+@media only screen and (max-width: 768px){
+    
+    form input {
+        width: 90%;
+    }
+
+
 }
