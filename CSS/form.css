@@ -14,9 +14,12 @@ form{
     width: 70%;
 }
 
-form input {
-    max-width: 400px;
-    width: 400px;
+form div{
+    width: 95%;
+}
+
+form div input {
+    width: 90%;
 }
 
 .form-body{
