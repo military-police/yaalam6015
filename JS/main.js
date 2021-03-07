@@ -29,57 +29,45 @@ function doALoadOfStuff() {
 
 //תמיכה בשפות אחרות
 
+var bars = document.querySelectorAll('#bar')
+var footer = document.querySelector('#footer')
+var sub = document.querySelector('#sub')
+var subtype = sub.attributes[1].value
+
+
 var lang = document.getElementById('lang');
 lang.addEventListener('change', (event) => {
   console.log(event.target.value)
-  if(event.target.value == "EN"){
-    eng()
-  }
-  if(event.target.value == "HE"){
-    heb()
-  }
-  if(event.target.value == "AR"){
-    arb()
-  }
+
+  let set = event.target.value;
+
+      // Navbar replasment
+      bars.forEach((element, i) => {
+        element.textContent = langs[set].nav[i]
+      });
+    
+    
+      //updating the main text on the page
+      sub.textContent = '';
+      langs[set][subtype].forEach((element) =>{
+        let p = document.createElement('p').innerText = element;
+        sub.append(p)
+      });
+    
+    
+      // updating the footer
+      footer.textContent = langs[set].footer
+
 });
 
 
-var bars = document.querySelectorAll('#bar')
-var footer = document.querySelector('#footer')
-var page = document.querySelector('#page')
-
-
-
-function eng(){
-  bars.forEach((element, i) => {
-    element.textContent = langs.en.nav[i]
-  });
-  footer.textContent = langs.en.footer
-  page.textContent = langs.en.page1
-}
-
-function heb(){
-  bars.forEach((element, i) => {
-    element.textContent = langs.he.nav[i]
-  });
-  footer.textContent = langs.he.footer
-  page.textContent = langs.he.page1
-}
-
-function arb(){
-  bars.forEach((element, i) => {
-    element.textContent = langs.ab.nav[i]
-  });
-  footer.textContent = langs.ab.footer
-  page.textContent = langs.ab.page1
-}
 
 
 const langs = {
-  en : {
+  EN : {
     nav:[ 'Info', 'Background' , 'Contact', 'Send A Complaint'],
     footer:"This website is served by the National Unit for Operational   Investigations in the IDF , in order to enable the service to  the public.",
-    page1:"The National Unit for Operational Investigations in the IDF is authorized to investigate suspected criminal offenses under international humanitarian law carried out during operational activities or ongoing security by soldiers under IDF command.",
+    page1:["The National Unit for Operational Investigations in the IDF is authorized to investigate suspected criminal offenses under international humanitarian law carried out during operational activities or ongoing security by soldiers under IDF command."],
     page2:[
       'On January 2017, the Investigating Military Police, invented the National Unit for Operational Investigations (so called: “YAALAM”), following two government committees (Turkel 2013, Ciechanover 2015) that dealt with international humanitarian law, inter alia with respect to suspected criminal offenses committed by IDF soldiers during operational activity or ongoing security',
       'From the report of the Turkel Committee which recommended the establishment of the unit, section 62, MPC for operational matters:',
@@ -96,16 +84,16 @@ const langs = {
     ]
   },
 
-  he : {
+  HE : {
     nav:[ 'כללי', 'אודות' , 'דרכים ליצרת קשר', 'הגשת תלונה'],
-    page1:"כללי : היחידה הארצית לחקירות מבצעיות במצ\"ח מוסמכת לחקור חשד לעבירה פלילית, בדין ההומניטארי הבין-לאומי שהתבצעה במהלך פעילות מבצעית או ביטחון שוטף ע\"י חיילים הנמצאים תחת פיקוד צה\"ל",
+    page1:["כללי : היחידה הארצית לחקירות מבצעיות במצ\"ח מוסמכת לחקור חשד לעבירה פלילית, בדין ההומניטארי הבין-לאומי שהתבצעה במהלך פעילות מבצעית או ביטחון שוטף ע\"י חיילים הנמצאים תחת פיקוד צה\"ל"],
     footer:"אתר זה מופעל ע\"י היחידה מתוך מטרה להנגיש את השירות לציבור."
 
   },
 
-  ab : {
+  AR : {
     nav:[ 'معلومات', 'خلفية' , 'اتصل', 'شروط الامتثال للشكوى'],
-    page1:"معلومات : الوحدة الوطنية للتحقيقات العملياتية في جيش الدفاع الإسرائيلي مخولة بالتحقيق في الجرائم الجنائية المشتبه بها بموجب القانون الإنساني الدولي والتي يتم تنفيذها أثناء الأنشطة العملياتية أو الأمن المستمر من قبل الجنود تحت قيادة جيش الدفاع الإسرائيلي.",
+    page1:["معلومات : الوحدة الوطنية للتحقيقات العملياتية في جيش الدفاع الإسرائيلي مخولة بالتحقيق في الجرائم الجنائية المشتبه بها بموجب القانون الإنساني الدولي والتي يتم تنفيذها أثناء الأنشطة العملياتية أو الأمن المستمر من قبل الجنود تحت قيادة جيش الدفاع الإسرائيلي."],
     footer:"يتم تشغيل هذا الموقع من قبل الوحدة لغرض جعل الخدمة في متناول الجمهور."
 
   }
