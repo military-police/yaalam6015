@@ -87,7 +87,7 @@ nav span{
     color: white;
     padding-top: 6%;
     padding-bottom: 6%;
-    background:linear-gradient(0deg, rgba(0, 0, 0, 0.16), rgba(0, 0, 0, 0.16)),url('/images/banner.jpg') no-repeat;
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.16), rgba(0, 0, 0, 0.16)),url('../images/banner.jpg') no-repeat;
     -webkit-background-size: cover ;
     -moz-background-size: cover;
     -moz-background-size: cover;
