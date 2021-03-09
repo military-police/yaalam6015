@@ -42,7 +42,7 @@
 
     <section>
 
-            <form action="post">
+            <form action="https://getform.io/f/2df70f8e-8749-494d-9618-7707f3fc6144" method="POST">
                 <div class="form-body">
                     <div>
                         <h5> שם מלא:</h5>
@@ -61,7 +61,7 @@
     
                     <div>
                         <h5>מספר פלאפון:</h5>
-                        <input type="tel">
+                        <input type="tel" name="tel">
                     </div>
     
                     <div>
@@ -71,20 +71,21 @@
 
                     <div>
                         <h5>מיקום האירוע :</h5>
-                        <input type="text" name="" required>
+                        <input type="text" name="place" required>
                     </div>
 
                     <div>
                         <h5>מהות הפניה :</h5>
-                        <textarea name="" id="" cols="55" rows="10"></textarea>
+                        <textarea type="text" name="info" id="" cols="55" rows="10"></textarea>
                     </div>
 
-                    <div>
+                    <!-- <div>
                         <h5>צרף מסמכים :</h5>
                         <input type="file" name="" id="">
+                    </div> -->
+                    <div class="btnwrapper">
+                        <button class="btn" type="submit" >שלח טופס</button>
                     </div>
-    
-                    <button type="submit">שלח</button>
                 </div>
 
             </form>
