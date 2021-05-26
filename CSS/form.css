@@ -62,3 +62,12 @@ textarea {
 
 
 }
+
+.info {
+    text-align: center;
+    margin-top: 20px;
+    color: rgb(255, 0, 0);
+    background-color: yellow;
+    margin-right: 15%;
+    margin-left: 15%;
+}
